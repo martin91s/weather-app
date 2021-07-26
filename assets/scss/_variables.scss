@@ -1,0 +1,18 @@
+// Your variable overrides
+$font-family-base: 'Montserrat', sans-serif;
+$h2-font-size: 46px;
+$border-radius: 6px;
+$primary: #407294;
+$secondary: #485461;
+
+// Inputs
+$input-height: 75px;
+$input-font-size: 1.25rem;
+
+// Buttons
+$btn-padding-x: 1.2rem;
+$btn-font-family: $font-family-base;
+$btn-padding-y: 1rem;
+
+@import '~bootstrap/scss/bootstrap';
+@import '~bootstrap-vue/src/index.scss';
