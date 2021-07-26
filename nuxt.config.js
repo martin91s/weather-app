@@ -56,4 +56,8 @@ export default {
 
     // Build Configuration: https://go.nuxtjs.dev/config-build
     build: {},
+
+    publicRuntimeConfig: {
+        WEATHER_API_KEY: process.env.WEATHER_API_KEY,
+    },
 };

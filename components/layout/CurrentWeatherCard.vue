@@ -2,52 +2,49 @@
     <div class="current-weather-card">
         <div class="weather-details">
             <div class="current-location">
-                <img src="../../assets/images/icon.png">
+                <img
+                    :src="`http://openweathermap.org/img/wn/${ result.weather[0].icon }@2x.png`"
+                    :alt="result.weather[0].description"
+                >
                 <div class="temperature">
                     <h2>
-                        {{ 25 | celcius }}
+                        {{ result.main.temp | celcius }}
                     </h2>
                 </div>
                 <div class="name">
-                    York
+                    {{ result.name }}
                 </div>
             </div>
         </div>
 
         <div class="weather-details">
             <ul>
-                <li>Feels like: {{ 26 | celcius }}</li>
-                <li>Humidity: 67%</li>
-                <li>Minimum temperature: {{ 15| celcius }}</li>
-                <li>Maximum temperature: {{ 27 | celcius }}</li>
-                <li>Wind Speed: 4mph</li>
-                <li>Rain volume in past hour: 0mm</li>
+                <li>Feels like: {{ result.main.feels_like | celcius }}</li>
+                <li>Humidity: {{ result.main.humidity }}%</li>
+                <li>Minimum temperature: {{ result.main.temp_min | celcius }}</li>
+                <li>Maximum temperature: {{ result.main.temp_max | celcius }}</li>
+                <li>Wind Speed: {{ result.wind.speed }}mph</li>
+                <li>
+                    Rain volume in past hour:
+                    {{ result.rain ? result.rain['1h'] : 0}}mm
+                </li>
             </ul>
         </div>
     </div>
 </template>
 
 <script>
+    import celcius from '../../plugins/celcius';
+
     export default {
         name: 'current-weather-card',
+
+        filters: { celcius },
 
         props: {
             result: {
                 type: Object,
                 default: () => ({}),
-            },
-        },
-
-        filters: {
-            /**
-             * A filter to change the value to celcius.
-             *
-             * @param {number} val
-             *
-             * @returns {string}
-             */
-            celcius(val) {
-                return `${ Math.round(val) }\u2103`;
             },
         },
     };

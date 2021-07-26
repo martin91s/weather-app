@@ -2,7 +2,10 @@
     <div class="page-content">
         <b-container>
             <city-search v-model="result" />
-            <current-weather-card :result="result" />
+            <current-weather-card
+                v-if="Object.keys(result).length"
+                :result="result"
+            />
         </b-container>
     </div>
 </template>
