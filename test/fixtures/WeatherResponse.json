@@ -1,0 +1,44 @@
+{
+    "coord": {
+        "lon": -0.3353,
+        "lat": 53.7446
+    },
+    "weather": [
+        {
+            "id": 801,
+            "main": "Clouds",
+            "description": "few clouds",
+            "icon": "02d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 21.11,
+        "feels_like": 21.16,
+        "temp_min": 18.43,
+        "temp_max": 24.73,
+        "pressure": 1007,
+        "humidity": 72
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 0.45,
+        "deg": 141,
+        "gust": 5.36
+    },
+    "clouds": {
+        "all": 20
+    },
+    "dt": 1627328202,
+    "sys": {
+        "type": 2,
+        "id": 2005211,
+        "country": "GB",
+        "sunrise": 1627272370,
+        "sunset": 1627330157
+    },
+    "timezone": 3600,
+    "id": 2645425,
+    "name": "Hull",
+    "cod": 200
+}
