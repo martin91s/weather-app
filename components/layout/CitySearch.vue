@@ -1,18 +1,21 @@
 <template>
     <div class="city-search">
-        <text-input
-            id="city"
-            v-model="city"
-            :error="error"
-            placeholder="Enter UK city name..."
-        />
-        <b-button
-            block
-            @click.prevent="search"
-            variant="primary"
-        >
-            Search
-        </b-button>
+        <form @submit.prevent="search">
+            <text-input
+                id="city"
+                v-model="city"
+                :error="error"
+                placeholder="Enter UK city name..."
+                required
+            />
+            <b-button
+                block
+                variant="primary"
+                type="submit"
+            >
+                Search
+            </b-button>
+        </form>
     </div>
 </template>
 

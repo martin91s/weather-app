@@ -49,10 +49,10 @@ describe('CitySearch', () => {
         });
     });
 
-    describe('When the search button is clicked', () => {
+    describe('When the form is submitted', () => {
         beforeEach( async () => {
             wrapper.find('input').setValue('York');
-            await wrapper.find('button').trigger('click');
+            await wrapper.find('form').trigger('submit');
         });
 
         test('The `search` method is called', async  () => {
@@ -106,7 +106,7 @@ describe('CitySearch', () => {
                 });
 
                 wrapper.find('input').setValue('Not a city');
-                await wrapper.find('button').trigger('click');
+                await wrapper.find('form').trigger('submit');
             });
 
             test('The `error` variable is updated', () => {

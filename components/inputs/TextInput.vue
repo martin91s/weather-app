@@ -11,6 +11,7 @@
             :id="id"
             v-model="inputValue"
             :placeholder="placeholder"
+            :required="required"
             :state="error ? false : null"
         />
     </b-form-group>
@@ -46,6 +47,11 @@
                 type: String,
                 default: '',
             },
+
+            required: {
+                type: Boolean,
+                default: false,
+            }
         },
 
         computed: {
