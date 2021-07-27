@@ -8,6 +8,6 @@ export default {
      * @returns {Promise<any>}
      */
     getCurrentWeather(context, data) {
-        return this.$axios.$post(`https:///api.openweathermap.org/data/2.5/weather?q=${ data }&appid=${ this.$config.WEATHER_API_KEY }&units=metric`);
+        return this.$axios.$post(`https:///api.openweathermap.org/data/2.5/weather?q=${ data },uk&appid=${ this.$config.WEATHER_API_KEY }&units=metric`);
     },
 };

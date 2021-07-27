@@ -4,7 +4,7 @@
             id="city"
             v-model="city"
             :error="error"
-            placeholder="Enter city name..."
+            placeholder="Enter UK city name..."
         />
         <b-button
             block

@@ -26,7 +26,7 @@
                 <li>Wind Speed: {{ result.wind.speed }}mph</li>
                 <li>
                     Rain volume in past hour:
-                    {{ result.rain ? result.rain['1h'] : 0}}mm
+                    {{ result.rain ? result.rain['1h'] : 0 }}mm
                 </li>
             </ul>
         </div>
